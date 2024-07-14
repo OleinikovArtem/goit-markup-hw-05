@@ -74,6 +74,7 @@ a {
 }
 
 button,
+input,
 img {
   outline: none;
   border: none;
@@ -445,4 +446,138 @@ img {
   color: var(--light-color);
   line-height: 1.5;
   max-width: 264px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity ease-in-out 0.2s;
+}
+
+.is-open {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  padding: 24px;
+  max-width: 408px;
+  border-radius: 4px;
+
+  background-color: var(--dairy-color);
+  overflow-y: auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-controller {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: var(--subtle-text-color);
+  gap: 4px;
+}
+
+.form-controller + button {
+  margin-top: 24px;
+}
+
+.form-controller:has(input[type='checkbox']) {
+  flex-direction: row;
+  gap: 8px;
+}
+
+.form-controller:focus-within .form-controller-input {
+  border-color: var(--primary-brand-color);
+}
+
+.form-controller:focus-within .form-controller-icon {
+  fill: var(--primary-brand-color);
+}
+
+.form-controller-input {
+  width: 100%;
+  height: 40px;
+  padding: 8px 8px 8px 48px;
+
+  border: 1px solid;
+  border-radius: 4px;
+
+  line-height: 40px;
+  transition: all cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+
+textarea.form-controller-input {
+  padding: 8px 16px;
+  height: auto;
+  line-height: 1.5;
+  resize: none;
+}
+
+.form-controller-icon {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  transition: all cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+
+.modal .close-button {
+  margin-left: auto;
+}
+
+.close-button {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4fd;
+  border-radius: 50%;
+  border: 1px solid #d9d9d9;
+  cursor: pointer;
+}
+
+.close-button__icon {
+  width: 10px;
+  height: 10px;
+  position: relative;
+}
+
+.close-button__icon::before,
+.close-button__icon::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--dark-color);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-button__icon::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
