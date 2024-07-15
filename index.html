@@ -420,38 +420,44 @@
         <p class="modal-title">Leave your contacts and we will call you back</p>
         <form class="form">
           <div class="form-controller">
-            <label class="form-controller-label small-text">Name</label>
+            <label class="form-controller-label small-text" for="user-name">Name</label>
             <div class="form-controller-input-wrap">
-              <input class="form-controller-input" type="text" name="name" required />
-              <svg width="24" height="24" class="form-controller-icon">
+              <input class="form-controller-input" type="text" name="name" id="user-name" required />
+              <svg width="18" height="24" class="form-controller-icon">
                 <use href="./images/icons.svg#icon-person"></use>
               </svg>
             </div>
           </div>
 
           <div class="form-controller">
-            <label class="form-controller-label small-text">Phone</label>
+            <label class="form-controller-label small-text" for="user-phone">Phone</label>
             <div class="form-controller-input-wrap">
-              <input class="form-controller-input" type="tel" name="phone" required />
-              <svg width="24" height="24" class="form-controller-icon">
+              <input class="form-controller-input" type="tel" name="phone" id="user-phone" required />
+              <svg width="18" height="24" class="form-controller-icon">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
             </div>
           </div>
 
           <div class="form-controller">
-            <label class="form-controller-label small-text">Email</label>
+            <label class="form-controller-label small-text" for="user-email">Email</label>
             <div class="form-controller-input-wrap">
-              <input class="form-controller-input" type="email" name="email" required />
-              <svg width="24" height="24" class="form-controller-icon">
+              <input class="form-controller-input" type="email" name="email" id="user-email" required />
+              <svg width="18" height="24" class="form-controller-icon">
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
             </div>
           </div>
 
           <div class="form-controller">
-            <label class="form-controller-label small-text">Comment</label>
-            <textarea class="form-controller-input" name="comment" rows="4" placeholder="Text input"></textarea>
+            <label class="form-controller-label small-text" for="user-comment">Comment</label>
+            <textarea
+              class="form-controller-input"
+              name="user-comment"
+              rows="4"
+              placeholder="Text input"
+              id="user-commect"
+            ></textarea>
           </div>
 
           <label class="form-controller small-text">
