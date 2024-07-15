@@ -414,6 +414,10 @@ img {
   margin-right: 120px;
 }
 
+.footer .col:nth-child(2) {
+  margin-right: 80px;
+}
+
 .footer .social {
   align-items: center;
   gap: 16px;
@@ -580,4 +584,36 @@ textarea.form-controller-input {
 
 .close-button__icon::after {
   transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.subscribe-form {
+  display: flex;
+  column-gap: 24px;
+  align-items: flex-end;
+}
+
+.subscribe-form-label {
+  font-weight: 500;
+}
+
+.subscribe-form .form-controller-input {
+  margin-top: 16px;
+  background: transparent;
+  color: var(--white-color);
+  border-color: var(--white-color);
+  padding: 8px 16px;
+}
+
+.subscribe-form .form-controller-input::placeholder {
+  color: var(--white-color);
+  font-size: 12px;
+}
+
+.subscribe-form .button {
+  fill: var(--white-color);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 40px;
+  padding: 8px 24px;
 }
