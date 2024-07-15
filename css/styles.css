@@ -516,10 +516,10 @@ img {
 }
 
 .modal .form-controller:nth-child(4) {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
-.modal .form-controller:last-child {
+.modal .form-controller:nth-child(5) {
   margin-bottom: 24px;
 }
 
@@ -547,8 +547,7 @@ img {
 }
 
 .form-controller-label {
-  display: flex;
-  align-items: center;
+  display: block;
   line-height: 1.17;
   margin-bottom: 4px;
 }
