@@ -515,6 +515,10 @@ img {
   margin-bottom: 8px;
 }
 
+.modal .form-controller:nth-child(4) {
+  margin-bottom: 16px;
+}
+
 .form-controller {
   display: flex;
   flex-direction: column;
@@ -568,6 +572,9 @@ textarea.form-controller-input {
   padding: 8px 16px;
   height: auto;
   resize: none;
+  height: 120px;
+  line-height: 1.17;
+  color: rgba(46, 47, 66, 0.4);
 }
 
 .form-controller-icon {
