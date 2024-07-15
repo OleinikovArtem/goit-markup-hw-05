@@ -413,15 +413,16 @@
     <div class="modal-overlay is-open">
       <div class="modal">
         <button class="close-button" type="button">
-          <!-- TODO: replace with SVG -->
-          <span class="close-button__icon"></span>
+          <svg width="8" height="8" class="close-button-icon">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
         </button>
         <form class="form">
           <p>Leave your contacts and we will call you back</p>
           <label class="form-controller small-text">
             Name
             <input class="form-controller-input" type="text" name="name" required />
-            <svg width="24" height="24">
+            <svg width="24" height="24" class="form-controller-icon">
               <use href="./images/icons.svg#icon-person"></use>
             </svg>
           </label>
