@@ -519,14 +519,14 @@ img {
   margin-bottom: 16px;
 }
 
+.modal .form-controller:last-child {
+  margin-bottom: 24px;
+}
+
 .form-controller {
   display: flex;
   flex-direction: column;
   color: var(--subtle-text-color);
-}
-
-.form-controller + button {
-  margin-top: 24px;
 }
 
 .form-controller:has(input[type='checkbox']) {
@@ -547,6 +547,8 @@ img {
 }
 
 .form-controller-label {
+  display: flex;
+  align-items: center;
   line-height: 1.17;
   margin-bottom: 4px;
 }
@@ -583,6 +585,22 @@ textarea.form-controller-input {
   left: 16px;
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 16px;
+  height: 16px;
+
+  fill: transparent;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal .close-button {
